@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Vector dot product benchmarking script
-# This script runs both Swift and C# implementations and collects benchmark results
+# This script runs Swift, C#, Go, and Rust implementations and collects benchmark results
 
 echo "Vector Dot Product Benchmark"
 echo "==========================="
@@ -57,33 +57,39 @@ echo "Detected OS: $OS"
 echo "Operating System: $OS" >>"$RESULTS_FILE"
 echo >>"$RESULTS_FILE"
 
+# Main project directory
+PROJECT_DIR=$(dirname "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)")
+
 # Run Swift benchmark
 echo
 echo "Running Swift benchmark..."
 echo "Swift Benchmark:" >>"$RESULTS_FILE"
 
 if [ "$OS" = "macOS" ] || [ "$OS" = "Linux" ]; then
-  cd ../swift/VectorDotProduct
+  cd "$PROJECT_DIR/swift/VectorDotProduct"
 
-  # Run Swift with release flag
-  echo "Building and running Swift in release mode..."
-  swift run -c release VectorDotProduct $VECTOR_SIZE >temp_output.txt
+  # Compile Swift with -Ounchecked optimization (maximum performance)
+  echo "Compiling Swift with -Ounchecked optimization..."
+  swiftc -Ounchecked main.swift -o VectorDotProductBenchmark
 
-  # Process the output to add time in different formats
+  # Run the compiled binary
+  echo "Running Swift benchmark..."
+  ./VectorDotProductBenchmark $VECTOR_SIZE >temp_output.txt
+
+  # Process the output
   while IFS= read -r line; do
-    echo "$line" | tee -a ../../"$RESULTS_FILE"
+    echo "$line" | tee -a "$PROJECT_DIR/$RESULTS_FILE"
 
-    # If this is the time line, add the conversions
-    if [[ "$line" == Time:* ]]; then
-      # Extract milliseconds value
-      ms=$(echo "$line" | grep -o '[0-9]\+')
-      formatted=$(format_time $ms)
-      echo "Time (formatted): $formatted" | tee -a ../../"$RESULTS_FILE"
+    # Check if line contains time information
+    if [[ "$line" == *"Time breakdown:"* ]] || [[ "$line" == *"Total time in seconds:"* ]]; then
+      # No need for additional formatting as the program outputs detailed time already
+      continue
     fi
   done <temp_output.txt
 
+  # Clean up
   rm temp_output.txt
-  cd ../../
+  cd "$PROJECT_DIR"
 else
   echo "Swift not supported on this platform" | tee -a "$RESULTS_FILE"
 fi
@@ -95,51 +101,85 @@ echo
 echo "Running C# benchmark..."
 echo "C# Benchmark:" >>"$RESULTS_FILE"
 
-if [ "$OS" = "Windows" ]; then
-  cd csharp/VectorDotProduct
+if [ -d "$PROJECT_DIR/csharp/VectorDotProduct" ]; then
+  cd "$PROJECT_DIR/csharp/VectorDotProduct"
 
   # Run C# with release flag
   dotnet run --configuration Release $VECTOR_SIZE >temp_output.txt
 
-  # Process the output to add time in different formats
+  # Process the output
   while IFS= read -r line; do
-    echo "$line" | tee -a ../../"$RESULTS_FILE"
-
-    # If this is the time line, add the conversions
-    if [[ "$line" == Time:* ]]; then
-      # Extract milliseconds value
-      ms=$(echo "$line" | grep -o '[0-9]\+')
-      formatted=$(format_time $ms)
-      echo "Time (formatted): $formatted" | tee -a ../../"$RESULTS_FILE"
-    fi
+    echo "$line" | tee -a "$PROJECT_DIR/$RESULTS_FILE"
   done <temp_output.txt
 
+  # Clean up
   rm temp_output.txt
-  cd ../../
-elif [ "$OS" = "macOS" ] || [ "$OS" = "Linux" ]; then
-  cd csharp/VectorDotProduct
-
-  # Run C# with release flag
-  dotnet run --configuration Release $VECTOR_SIZE >temp_output.txt
-
-  # Process the output to add time in different formats
-  while IFS= read -r line; do
-    echo "$line" | tee -a ../../"$RESULTS_FILE"
-
-    # If this is the time line, add the conversions
-    if [[ "$line" == Time:* ]]; then
-      # Extract milliseconds value
-      ms=$(echo "$line" | grep -o '[0-9]\+')
-      formatted=$(format_time $ms)
-      echo "Time (formatted): $formatted" | tee -a ../../"$RESULTS_FILE"
-    fi
-  done <temp_output.txt
-
-  rm temp_output.txt
-  cd ../../
+  cd "$PROJECT_DIR"
 else
-  echo "C# not supported on this platform" | tee -a "$RESULTS_FILE"
+  echo "C# implementation not found" | tee -a "$RESULTS_FILE"
+fi
+
+echo >>"$RESULTS_FILE"
+
+# Run Go benchmark
+echo
+echo "Running Go benchmark..."
+echo "Go Benchmark:" >>"$RESULTS_FILE"
+
+if [ -d "$PROJECT_DIR/go/VectorDotProduct" ]; then
+  cd "$PROJECT_DIR/go/VectorDotProduct"
+
+  # Build Go with optimizations
+  echo "Building Go..."
+  go build -o VectorDotProductBenchmark main.go
+
+  # Run the compiled binary
+  echo "Running Go benchmark..."
+  ./VectorDotProductBenchmark $VECTOR_SIZE >temp_output.txt
+
+  # Process the output
+  while IFS= read -r line; do
+    echo "$line" | tee -a "$PROJECT_DIR/$RESULTS_FILE"
+  done <temp_output.txt
+
+  # Clean up
+  rm temp_output.txt
+  rm VectorDotProductBenchmark
+  cd "$PROJECT_DIR"
+else
+  echo "Go implementation not found" | tee -a "$RESULTS_FILE"
+fi
+
+echo >>"$RESULTS_FILE"
+
+# Run Rust benchmark
+echo
+echo "Running Rust benchmark..."
+echo "Rust Benchmark:" >>"$RESULTS_FILE"
+
+if [ -d "$PROJECT_DIR/rust/VectorDotProduct" ]; then
+  cd "$PROJECT_DIR/rust/VectorDotProduct"
+
+  # Build Rust with release optimizations
+  echo "Building Rust with --release optimizations..."
+  cargo build --release
+
+  # Run the compiled binary
+  echo "Running Rust benchmark..."
+  ./target/release/vector_dot_product $VECTOR_SIZE >temp_output.txt
+
+  # Process the output
+  while IFS= read -r line; do
+    echo "$line" | tee -a "$PROJECT_DIR/$RESULTS_FILE"
+  done <temp_output.txt
+
+  # Clean up
+  rm temp_output.txt
+  cd "$PROJECT_DIR"
+else
+  echo "Rust implementation not found" | tee -a "$RESULTS_FILE"
 fi
 
 echo
 echo "Benchmarks complete. Results saved to $RESULTS_FILE"
+

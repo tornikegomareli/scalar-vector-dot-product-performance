@@ -1,0 +1,8 @@
+Vector Dot Product Benchmark Results
+Date: Wed Apr 16 16:02:48 +04 2025
+Vector Size: 10000000
+=======================================
+
+Operating System: macOS
+
+Swift Benchmark:
