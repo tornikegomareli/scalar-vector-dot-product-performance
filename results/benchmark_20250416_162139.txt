@@ -1,0 +1,8 @@
+Running Swift vector dot product benchmark with size: 10000000
+Generating 10000000 random 3D vectors...
+Starting benchmark...
+Result: nan
+Time breakdown: 0 minutes, 4 seconds, 727 milliseconds
+Total time in seconds: 4.727786064147949
+
+C# Benchmark:

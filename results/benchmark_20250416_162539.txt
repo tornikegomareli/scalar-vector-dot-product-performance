@@ -1,0 +1,30 @@
+Running Swift vector dot product benchmark with size: 10000000
+Generating 10000000 random 3D vectors...
+Starting benchmark...
+Result: nan
+Time breakdown: 0 minutes, 4 seconds, 421 milliseconds
+Total time in seconds: 4.42179799079895
+
+C# Benchmark:
+Running C# vector dot product benchmark with size: 10000000
+Generating 10000000 random 3D vectors...
+Starting benchmark...
+Result: NaN
+Time breakdown: 0 minutes, 7 seconds, 566 milliseconds
+Total time in seconds: 7.5669493
+
+Go Benchmark:
+Running Go vector dot product benchmark with size: 10000000
+Generating 10000000 random 3D vectors...
+Starting benchmark...
+Result: NaN
+Time breakdown: 0 minutes, 1 seconds, 8 milliseconds
+Total time in seconds: 1.008035
+
+Rust Benchmark:
+Running Rust vector dot product benchmark with size: 10000000
+Generating 10000000 random 3D vectors...
+Starting benchmark...
+Result: NaN
+Time breakdown: 0 minutes, 0 seconds, 618 milliseconds
+Total time in seconds: 0.618134708
