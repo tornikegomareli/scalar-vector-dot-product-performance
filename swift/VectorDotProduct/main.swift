@@ -1,6 +1,7 @@
 import Foundation
 
-let vectorSize = 10_000_000
+// Parse vector size from command line or use default
+let vectorSize = CommandLine.argc > 1 ? Int(CommandLine.arguments[1]) ?? 10_000_000 : 10_000_000
 print("Running Swift vector dot product benchmark with size: \(vectorSize)")
 
 struct Vector3D {
