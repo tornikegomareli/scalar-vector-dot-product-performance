@@ -1,0 +1,211 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.VectorDotProduct-arm64-apple-macosx15.0-release.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/tornikegomareli/Development/vector-dot-product-benchmark/swift/VectorDotProduct/.build/arm64-apple-macosx/release/VectorDotProduct.build/sources",
+      "importPath" : "/Users/tornikegomareli/Development/vector-dot-product-benchmark/swift/VectorDotProduct/.build/arm64-apple-macosx/release/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/tornikegomareli/Development/vector-dot-product-benchmark/swift/VectorDotProduct/main.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/tornikegomareli/Development/vector-dot-product-benchmark/swift/VectorDotProduct/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/tornikegomareli/Development/vector-dot-product-benchmark/swift/VectorDotProduct/.build/arm64-apple-macosx/release/VectorDotProduct.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "VectorDotProduct",
+      "moduleOutputPath" : "/Users/tornikegomareli/Development/vector-dot-product-benchmark/swift/VectorDotProduct/.build/arm64-apple-macosx/release/Modules/VectorDotProduct.swiftmodule",
+      "objects" : [
+        "/Users/tornikegomareli/Development/vector-dot-product-benchmark/swift/VectorDotProduct/.build/arm64-apple-macosx/release/VectorDotProduct.build/main.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx10.15",
+        "-O",
+        "-j11",
+        "-DSWIFT_PACKAGE",
+        "-module-cache-path",
+        "/Users/tornikegomareli/Development/vector-dot-product-benchmark/swift/VectorDotProduct/.build/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "VectorDotProduct_main",
+        "-color-diagnostics",
+        "-swift-version",
+        "5",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g"
+      ],
+      "outputFileMapPath" : "/Users/tornikegomareli/Development/vector-dot-product-benchmark/swift/VectorDotProduct/.build/arm64-apple-macosx/release/VectorDotProduct.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/tornikegomareli/Development/vector-dot-product-benchmark/swift/VectorDotProduct/.build/arm64-apple-macosx/release/VectorDotProduct.build/main.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/tornikegomareli/Development/vector-dot-product-benchmark/swift/VectorDotProduct/.build/arm64-apple-macosx/release/Modules/VectorDotProduct.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/tornikegomareli/Development/vector-dot-product-benchmark/swift/VectorDotProduct/main.swift"
+      ],
+      "tempsPath" : "/Users/tornikegomareli/Development/vector-dot-product-benchmark/swift/VectorDotProduct/.build/arm64-apple-macosx/release/VectorDotProduct.build",
+      "wholeModuleOptimization" : true
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "VectorDotProduct" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "VectorDotProduct",
+      "-whole-module-optimization",
+      "-num-threads",
+      "11",
+      "-c",
+      "/Users/tornikegomareli/Development/vector-dot-product-benchmark/swift/VectorDotProduct/main.swift",
+      "-I",
+      "/Users/tornikegomareli/Development/vector-dot-product-benchmark/swift/VectorDotProduct/.build/arm64-apple-macosx/release/Modules",
+      "-target",
+      "arm64-apple-macosx10.15",
+      "-O",
+      "-j11",
+      "-DSWIFT_PACKAGE",
+      "-module-cache-path",
+      "/Users/tornikegomareli/Development/vector-dot-product-benchmark/swift/VectorDotProduct/.build/arm64-apple-macosx/release/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "VectorDotProduct_main",
+      "-color-diagnostics",
+      "-swift-version",
+      "5",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "VectorDotProduct" : [
+
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "writeCommands" : {
+    "/Users/tornikegomareli/Development/vector-dot-product-benchmark/swift/VectorDotProduct/.build/arm64-apple-macosx/release/VectorDotProduct.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/tornikegomareli/Development/vector-dot-product-benchmark/swift/VectorDotProduct/main.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/tornikegomareli/Development/vector-dot-product-benchmark/swift/VectorDotProduct/.build/arm64-apple-macosx/release/VectorDotProduct.build/sources"
+    },
+    "/Users/tornikegomareli/Development/vector-dot-product-benchmark/swift/VectorDotProduct/.build/arm64-apple-macosx/release/VectorDotProduct.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/tornikegomareli/Development/vector-dot-product-benchmark/swift/VectorDotProduct/.build/arm64-apple-macosx/release/VectorDotProduct.build/main.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/tornikegomareli/Development/vector-dot-product-benchmark/swift/VectorDotProduct/.build/arm64-apple-macosx/release/VectorDotProduct.product/Objects.LinkFileList"
+    },
+    "/Users/tornikegomareli/Development/vector-dot-product-benchmark/swift/VectorDotProduct/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/tornikegomareli/Development/vector-dot-product-benchmark/swift/VectorDotProduct/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}

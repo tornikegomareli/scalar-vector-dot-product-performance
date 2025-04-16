@@ -4,10 +4,17 @@ import Foundation
 let vectorSize = CommandLine.argc > 1 ? Int(CommandLine.arguments[1]) ?? 10_000_000 : 10_000_000
 print("Running Swift vector dot product benchmark with size: \(vectorSize)")
 
-struct Vector3D {
+// Changed from struct to class to use heap allocation instead of stack
+class Vector3D {
   let x: Double
   let y: Double
   let z: Double
+
+  init(x: Double, y: Double, z: Double) {
+    self.x = x
+    self.y = y
+    self.z = z
+  }
 
   func dot(_ other: Vector3D) -> Double {
     return x * other.x + y * other.y + z * other.z
@@ -32,14 +39,12 @@ var vectorsB = [Vector3D]()
 func calculateAllDotProducts(_ a: inout [Vector3D], _ b: inout [Vector3D]) -> Double {
   var sum = 0.0
   var i = 0
-
   while i < vectorSize {
     a.append(Vector3D.random())
     b.append(Vector3D.random())
     sum += a[i].dot(b[i])
     i += 1
   }
-
   return sum
 }
 

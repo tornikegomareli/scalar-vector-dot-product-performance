@@ -1,0 +1,6 @@
+version: "Apple Swift version 6.0.3 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)"
+options: "3d4085236abb946622b575538831be38135b0f72992a11bf9d7c27fcf2dc9ce7"
+build_start_time: [1744805541, 834588000]
+build_end_time: [1744805543, 553405000]
+inputs:
+  "/Users/tornikegomareli/Development/vector-dot-product-benchmark/swift/VectorDotProduct/main.swift": [1744805107, 338564268]

@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/tornikegomareli/Development/vector-dot-product-benchmark/swift/VectorDotProduct/.build/arm64-apple-macosx/debug/VectorDotProduct.build/master.swiftdeps"
+  },
+  "/Users/tornikegomareli/Development/vector-dot-product-benchmark/swift/VectorDotProduct/main.swift": {
+    "dependencies": "/Users/tornikegomareli/Development/vector-dot-product-benchmark/swift/VectorDotProduct/.build/arm64-apple-macosx/debug/VectorDotProduct.build/main.d",
+    "object": "/Users/tornikegomareli/Development/vector-dot-product-benchmark/swift/VectorDotProduct/.build/arm64-apple-macosx/debug/VectorDotProduct.build/main.swift.o",
+    "swiftmodule": "/Users/tornikegomareli/Development/vector-dot-product-benchmark/swift/VectorDotProduct/.build/arm64-apple-macosx/debug/VectorDotProduct.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/tornikegomareli/Development/vector-dot-product-benchmark/swift/VectorDotProduct/.build/arm64-apple-macosx/debug/VectorDotProduct.build/main.swiftdeps"
+  }
+}
