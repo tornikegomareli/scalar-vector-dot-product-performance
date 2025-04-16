@@ -1,0 +1,15 @@
+/Users/tornikegomareli/Development/vector-dot-product-benchmark/csharp/VectorDotProduct/obj/Release/net8.0/VectorDotProduct.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tornikegomareli/Development/vector-dot-product-benchmark/csharp/VectorDotProduct/obj/Release/net8.0/VectorDotProduct.AssemblyInfoInputs.cache
+/Users/tornikegomareli/Development/vector-dot-product-benchmark/csharp/VectorDotProduct/obj/Release/net8.0/VectorDotProduct.AssemblyInfo.cs
+/Users/tornikegomareli/Development/vector-dot-product-benchmark/csharp/VectorDotProduct/obj/Release/net8.0/VectorDotProduct.csproj.CoreCompileInputs.cache
+/Users/tornikegomareli/Development/vector-dot-product-benchmark/csharp/VectorDotProduct/obj/Release/net8.0/VectorDotProduct.sourcelink.json
+/Users/tornikegomareli/Development/vector-dot-product-benchmark/csharp/VectorDotProduct/bin/Release/net8.0/VectorDotProduct
+/Users/tornikegomareli/Development/vector-dot-product-benchmark/csharp/VectorDotProduct/bin/Release/net8.0/VectorDotProduct.deps.json
+/Users/tornikegomareli/Development/vector-dot-product-benchmark/csharp/VectorDotProduct/bin/Release/net8.0/VectorDotProduct.runtimeconfig.json
+/Users/tornikegomareli/Development/vector-dot-product-benchmark/csharp/VectorDotProduct/bin/Release/net8.0/VectorDotProduct.dll
+/Users/tornikegomareli/Development/vector-dot-product-benchmark/csharp/VectorDotProduct/bin/Release/net8.0/VectorDotProduct.pdb
+/Users/tornikegomareli/Development/vector-dot-product-benchmark/csharp/VectorDotProduct/obj/Release/net8.0/VectorDotProduct.dll
+/Users/tornikegomareli/Development/vector-dot-product-benchmark/csharp/VectorDotProduct/obj/Release/net8.0/refint/VectorDotProduct.dll
+/Users/tornikegomareli/Development/vector-dot-product-benchmark/csharp/VectorDotProduct/obj/Release/net8.0/VectorDotProduct.pdb
+/Users/tornikegomareli/Development/vector-dot-product-benchmark/csharp/VectorDotProduct/obj/Release/net8.0/VectorDotProduct.genruntimeconfig.cache
+/Users/tornikegomareli/Development/vector-dot-product-benchmark/csharp/VectorDotProduct/obj/Release/net8.0/ref/VectorDotProduct.dll
