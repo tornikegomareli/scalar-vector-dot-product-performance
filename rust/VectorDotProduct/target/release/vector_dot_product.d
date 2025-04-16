@@ -1,0 +1,1 @@
+/Users/tornikegomareli/Development/vector-dot-product-benchmark/rust/VectorDotProduct/target/release/vector_dot_product: /Users/tornikegomareli/Development/vector-dot-product-benchmark/rust/VectorDotProduct/src/main.rs

@@ -1,0 +1,16 @@
+[package]
+name = "vector_dot_product"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rand = "0.8.5"
+
+[[bin]]
+name = "vector_dot_product"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1

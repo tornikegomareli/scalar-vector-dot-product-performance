@@ -1,0 +1,10 @@
+/Users/tornikegomareli/Development/vector-dot-product-benchmark/rust/VectorDotProduct/target/release/deps/libppv_lite86-065e5a4473d34160.rmeta: /Users/tornikegomareli/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/lib.rs /Users/tornikegomareli/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/soft.rs /Users/tornikegomareli/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/types.rs /Users/tornikegomareli/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/generic.rs
+
+/Users/tornikegomareli/Development/vector-dot-product-benchmark/rust/VectorDotProduct/target/release/deps/libppv_lite86-065e5a4473d34160.rlib: /Users/tornikegomareli/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/lib.rs /Users/tornikegomareli/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/soft.rs /Users/tornikegomareli/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/types.rs /Users/tornikegomareli/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/generic.rs
+
+/Users/tornikegomareli/Development/vector-dot-product-benchmark/rust/VectorDotProduct/target/release/deps/ppv_lite86-065e5a4473d34160.d: /Users/tornikegomareli/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/lib.rs /Users/tornikegomareli/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/soft.rs /Users/tornikegomareli/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/types.rs /Users/tornikegomareli/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/generic.rs
+
+/Users/tornikegomareli/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/lib.rs:
+/Users/tornikegomareli/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/soft.rs:
+/Users/tornikegomareli/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/types.rs:
+/Users/tornikegomareli/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ppv-lite86-0.2.21/src/generic.rs:
