@@ -4,9 +4,10 @@ using System.Diagnostics;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        const int vectorSize = 10_000_000;
+        // Parse vector size from command line or use default
+        int vectorSize = args.Length > 0 ? int.Parse(args[0]) : 10_000_000;
         Console.WriteLine($"Running C# vector dot product benchmark with size: {vectorSize}");
         Console.WriteLine($"Generating {vectorSize} random 3D vectors...");
 
@@ -32,13 +33,14 @@ class Program
     static double CalculateAllDotProducts(List<Vector3D> a, List<Vector3D> b, int vectorSize)
     {
         double sum = 0.0;
+        int i = 0;
 
-        for (int i = 0; i < vectorSize; i++)
+        while (i < vectorSize)
         {
             a.Add(Vector3D.Random());
             b.Add(Vector3D.Random());
-
             sum += a[i].Dot(b[i]);
+            i++;
         }
 
         return sum;
@@ -63,13 +65,12 @@ struct Vector3D
         return X * other.X + Y * other.Y + Z * other.Z;
     }
 
-    // Create a new Random instance each time like Swift does
     public static Vector3D Random()
     {
         // Create a new random instance each time to match Swift behavior
         var random = new Random();
 
-        // Match Swift's use of full double range
+        // Match Swift's range from leastNormalMagnitude to greatestFiniteMagnitude
         return new Vector3D(
             x: (random.NextDouble() * double.MaxValue) * (random.Next(2) == 0 ? 1 : -1),
             y: (random.NextDouble() * double.MaxValue) * (random.Next(2) == 0 ? 1 : -1),
