@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VectorDotProduct")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8a25fedc5cac209c583329b4755b50928e6d764")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+19edfb12b1ce75cb2821ad63430f56f57abeee0e")]
 [assembly: System.Reflection.AssemblyProductAttribute("VectorDotProduct")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VectorDotProduct")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

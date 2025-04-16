@@ -6,12 +6,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Parse vector size from command line or use default
         int vectorSize = args.Length > 0 ? int.Parse(args[0]) : 10_000_000;
         Console.WriteLine($"Running C# vector dot product benchmark with size: {vectorSize}");
         Console.WriteLine($"Generating {vectorSize} random 3D vectors...");
 
-        // Use dynamic lists instead of pre-allocated arrays
         var vectorsA = new List<Vector3D>();
         var vectorsB = new List<Vector3D>();
 
@@ -34,7 +32,6 @@ class Program
     {
         double sum = 0.0;
         int i = 0;
-
         while (i < vectorSize)
         {
             a.Add(Vector3D.Random());
@@ -42,12 +39,11 @@ class Program
             sum += a[i].Dot(b[i]);
             i++;
         }
-
         return sum;
     }
 }
 
-struct Vector3D
+class Vector3D
 {
     public double X { get; }
     public double Y { get; }
@@ -67,10 +63,7 @@ struct Vector3D
 
     public static Vector3D Random()
     {
-        // Create a new random instance each time to match Swift behavior
         var random = new Random();
-
-        // Match Swift's range from leastNormalMagnitude to greatestFiniteMagnitude
         return new Vector3D(
             x: (random.NextDouble() * double.MaxValue) * (random.Next(2) == 0 ? 1 : -1),
             y: (random.NextDouble() * double.MaxValue) * (random.Next(2) == 0 ? 1 : -1),
