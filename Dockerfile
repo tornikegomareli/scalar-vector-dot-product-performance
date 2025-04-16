@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS base
 
-# Install Swift dependencies
+# Install Swift dependencies (including clang for swiftc)
 RUN apt-get update && apt-get install -y \
     binutils \
     git \
